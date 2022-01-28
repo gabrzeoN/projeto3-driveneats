@@ -23,6 +23,7 @@ header{
     padding: 0px 21px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+    z-index: 1;
     position: sticky;
     top: 0px;
     left: 0px;
@@ -83,6 +84,9 @@ main{
     margin-top: 17px;
     margin-right: 16px;
     
+    position: relative;
+
+    border: 5px solid #32B72F;
     border-radius: 9px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
 }
@@ -143,6 +147,14 @@ main p{
     margin-top: 5px;
 }
 
+.checkmark-circle{
+    color: #32B72F;
+    font-size: 25px;
+    position: absolute;
+    right: 9.38%;
+    bottom: 9.38%;
+}
+
 footer{
     background-color: white;
     width: 414px;
@@ -171,3 +183,18 @@ footer button{
     text-align: center;
     letter-spacing: 0.018em;
 }
+
+
+
+
+/******************* Interaction ********************/
+.item-not-selected{
+    border: 0px;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.dishe:nth-child(){}

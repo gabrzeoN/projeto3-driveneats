@@ -28,25 +28,28 @@
                 <h2>Primeiro, seu prato</h2>
                 <div class="dishes-scroll">
 
-                    <div class="dishe">
+                    <div class="dishe item-not-selected" onclick="selectDishe(1)">
                         <img src="img/dishes/frango_yin_yang.jpg" alt="Frango Yin Yang">
                         <h3>Frango Yin Yang</h3>
                         <h4>Um pouco de batata, um pouco de salada</h4>
                         <p>R$ 14,90</p>
+                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
                     </div>
 
-                    <div class="dishe">
+                    <div class="dishe item-not-selected" onclick="selectDishe(2)">
                         <img src="img/dishes/macarrao.jpg" alt="Macarrao">
                         <h3>Macarrão</h3>
                         <h4>Tradicional italiano</h4>
                         <p>R$ 20,90</p>
+                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
                     </div>
 
-                    <div class="dishe">
+                    <div class="dishe item-not-selected" onclick="selectDishe(3)">
                         <img src="img/dishes/sushi.jpg" alt="Sushi">
                         <h3>Sushi</h3>
                         <h4>Comida japonesa hmmmmm :p</h4>
                         <p>R$ 30,90</p>
+                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
                     </div>
 
                 </div>  
@@ -56,11 +59,12 @@
                 <h2>Agora, sua bebida</h2>
                 <div class="drinks-scroll">
                     
-                    <div class="drink">
+                    <div class="drink item-not-selected">
                         <img src="img/drinks/coquinha_gelada.jpg" alt="Coca lata 350ml">
                         <h3>Coquinha gelada</h3>
                         <h4>Lata 350ml</h4>
                         <p>R$ 4,90</p>
+                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
                     </div>
 
                     <div class="drink">
@@ -68,6 +72,7 @@
                         <h3>Fanta uva</h3>
                         <h4>Lata 350ml</h4>
                         <p>R$ 5,00</p>
+                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
                     </div>
 
                     <div class="drink">
@@ -75,6 +80,7 @@
                         <h3>Energético Monster</h3>
                         <h4>Lata 473ml</h4>
                         <p>R$ 8,50</p>
+                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
                     </div>
 
                 </div>  
@@ -84,11 +90,12 @@
                 <h2>Por fim, sua sobremesa</h2>
                 <div class="desserts-scroll">
                     
-                    <div class="dessert">
+                    <div class="dessert item-not-selected" onclick="selectDessert()">
                         <img src="img/desserts/pudim.jpg" alt="Pudim">
                         <h3>Pudim</h3>
                         <h4>Apenas pudim</h4>
                         <p>R$ 7,90</p>
+                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
                     </div>
 
                     <div class="dessert">
@@ -96,6 +103,7 @@
                         <h3>Sorvete</h3>
                         <h4>Três opções de sabores</h4>
                         <p>R$ 3,75</p>
+                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
                     </div>
 
                     <div class="dessert">
@@ -103,6 +111,7 @@
                         <h3>Açai</h3>
                         <h4>400ml</h4>
                         <p>R$ 13,50</p>
+                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
                     </div>
 
                 </div>  
@@ -116,6 +125,7 @@
             </button>
         </footer>
     </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
