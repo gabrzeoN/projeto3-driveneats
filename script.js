@@ -3,120 +3,88 @@ let disheSelected = false;
 let drinkSelected = false;
 let dessertSelected = false;
 
-// const dishesOptionAmount = 3;
-// const drinksOptionAmount = 3;
-// const dessertOptionAmount = 3;
+let disheSelectedName = "";
+let disheSelectedPrice = 0;
+let drinkSelectedName = "";
+let drinkSelectedPrice = 0;
+let dessertSelectedName = "";
+let dessertSelectedPrice = 0;
 
-function selectOption(typeOfFood, numberOfFood) {
-    if (typeOfFood === "dishe") {
+let clientName = "";
+let clientAddress = "";
+let message = "";
+
+function selectOption(foodType, foodNumber, foodPrice, foodName) {
+    if (foodType === "dishe") {
         disheSelected = true;
-    } else if (typeOfFood === "drink") {
+        disheSelectedName = foodName;
+        disheSelectedPrice = foodPrice;
+    } else if (foodType === "drink") {
         drinkSelected = true;
-    } else if (typeOfFood === "dessert") {
+        drinkSelectedName = foodName;
+        drinkSelectedPrice = foodPrice;
+    } else if (foodType === "dessert") {
         dessertSelected = true;
+        dessertSelectedName = foodName;
+        dessertSelectedPrice = foodPrice;
     } else {
-
+        return alert("ERRO! foodType entry doesn't exist.");
     }
 
-    deselectAll(typeOfFood);
-    select(typeOfFood, numberOfFood);
+    if(disheSelected && drinkSelected && dessertSelected){
+        changeOrderButton();
+    }
+
+    deselectAll(foodType);
+    select(foodType, foodNumber);
 }
 
-function select(typeOfFood, numberOfFood){
-    content = document.querySelector("." + typeOfFood + ":nth-child(" + numberOfFood + ")");
+function select(foodType, foodNumber){
+    content = document.querySelector("." + foodType + ":nth-child(" + foodNumber + ")");
     content.classList.remove("item-not-selected");
-    content = document.querySelector("." + typeOfFood + ":nth-child(" + numberOfFood + ")" + " .checkmark-circle");
+    content = document.querySelector("." + foodType + ":nth-child(" + foodNumber + ")" + " .checkmark-circle");
     content.classList.remove("hidden");
 }
 
-function deselectAll(typeOfFood) {
-    content = document.querySelector("." + typeOfFood + ":nth-child(1)");
+function deselectAll(foodType) {
+    content = document.querySelector("." + foodType + ":nth-child(1)");
     content.classList.add("item-not-selected");
-    content = document.querySelector("."+typeOfFood+":nth-child(1)" + " .checkmark-circle");
+    content = document.querySelector("."+foodType+":nth-child(1)" + " .checkmark-circle");
     content.classList.add("hidden");
-    content = document.querySelector("." + typeOfFood + ":nth-child(2)");
+    content = document.querySelector("." + foodType + ":nth-child(2)");
     content.classList.add("item-not-selected");
-    content = document.querySelector("."+typeOfFood+":nth-child(2)" + " .checkmark-circle");
+    content = document.querySelector("."+foodType+":nth-child(2)" + " .checkmark-circle");
     content.classList.add("hidden");
-    content = document.querySelector("." + typeOfFood + ":nth-child(3)");
+    content = document.querySelector("." + foodType + ":nth-child(3)");
     content.classList.add("item-not-selected");
-    content = document.querySelector("." + typeOfFood + ":nth-child(3)" + " .checkmark-circle");
+    content = document.querySelector("." + foodType + ":nth-child(3)" + " .checkmark-circle");
     content.classList.add("hidden");
 }
 
+function changeOrderButton(){
+    content = document.querySelector("footer button");
+    content.classList.add("green-button");
+
+    content.innerHTML = 'Fechar pedido';
+}
+
+function closeOrder(){
+    if(disheSelected && drinkSelected && dessertSelected){
+        clientName = prompt("Nome do cliente: ");
+        clientAddress = prompt("Endereço do cliente: ");
+
+        message = `
+        Olá, gostaria de fazer o pedido:
+        - Prato: ${disheSelectedName}
+        - Bebida: ${drinkSelectedName}
+        - Sobremesa: ${dessertSelectedName}
+        Total: R$ ${(disheSelectedPrice + drinkSelectedPrice + dessertSelectedPrice).toFixed(2)}
 
 
-
-
-
-
-
-
-// function selectDishe(x) {
-//     disheSelected = 1;
-//     if (x === 1) {
-//         // deselectDishe2();
-//         // deselectDishe3();
-//         selectDishe1();
-//     } else if (x === 2) {
-//         // deselectDishe1();
-//         // deselectDishe3();
-//         selectDishe2();
-//     } else if (x === 3) {
-//         // deselectDishe1();
-//         // deselectDishe2();
-//         selectDishe3();
-//     } else {
-//         alert("ERRO! function selectDishe()");
-//     }
-// }
-
-
-
-// // Select / Deselect    DISHE 1
-// function selectDishe1() {
-//     content = document.querySelector(".dishe:nth-child(1)");
-//     content.classList.remove("item-not-selected");
-//     content = document.querySelector(".dishe:nth-child(1) .checkmark-circle");
-//     content.classList.remove("hidden");
-// }
-// function deselectDishe1(){
-//     content = document.querySelector(".dishe:nth-child(1)");
-//     content.classList.add("item-not-selected");
-//     content = document.querySelector(".dishe:nth-child(1) .checkmark-circle");
-//     content.classList.add("hidden");
-// }
-
-// // Select / Deselect    DISHE 2
-// function selectDishe2(){
-//     content = document.querySelector(".dishe:nth-child(2)"); ``
-//     content.classList.remove("item-not-selected");
-//     content = document.querySelector(".dishe:nth-child(2) .checkmark-circle");
-//     content.classList.remove("hidden");
-// }
-// function deselectDishe2(){
-//     content = document.querySelector(".dishe:nth-child(2)");
-//     content.classList.add("item-not-selected");
-//     content = document.querySelector(".dishe:nth-child(2) .checkmark-circle");
-//     content.classList.add("hidden");
-// }
-
-// // Select / Deselect    DISHE 3
-// function selectDishe3(){
-//     content = document.querySelector(".dishe:nth-child(3)");
-//     content.classList.remove("item-not-selected");
-//     content = document.querySelector(".dishe:nth-child(3) .checkmark-circle");
-//     content.classList.remove("hidden");
-// }
-// function deselectDishe3(){
-//     content = document.querySelector(".dishe:nth-child(3)");
-//     content.classList.add("item-not-selected");
-//     content = document.querySelector(".dishe:nth-child(3) .checkmark-circle");
-//     content.classList.add("hidden");
-// }
-
-
-
-
-// // function selectDrink() { }
-// // function selectDessert() { }
+        Nome: ${clientName}
+        Endereço: ${clientAddress}
+        `
+        
+        window.open("https://wa.me/5544999973970?text=" + encodeURIComponent(message), "_blank");          
+    }
+}

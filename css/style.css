@@ -169,6 +169,7 @@ footer button{
     width: 364px;
     height: 61px;
     border-radius: 50px;
+    border: 1px solid white;
 
     position: absolute;
     left: 25px;
@@ -197,4 +198,7 @@ footer button{
     display: none;
 }
 
-.dishe:nth-child(){}
+.green-button{
+    background-color:#32B72F;
+    border: 1px solid white;
+}
