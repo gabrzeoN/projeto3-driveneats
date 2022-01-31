@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,114 +18,123 @@
     <link rel="stylesheet" href="css/style.css">
     <title>DrivenEats</title>
 </head>
+
 <body>
-    <div class="app-area">
-        <header>
-            <h1>DrivenEats</h1>
-            <p>Sua comida em 6 minutos</p>
-        </header>
-        <main>
-            <section class="dishes" data-identifier="dishes">
-                <h2>Primeiro, seu prato</h2>
-                <div class="dishes-scroll">
+    <header>
+        <h1>DrivenEats</h1>
+        <p>Sua comida em 6 minutos</p>
+    </header>
+    <main>
+        <section class="dishes" data-identifier="dishes">
+            <h2>Primeiro, seu prato</h2>
+            <div class="dishes-scroll">
 
-                    <div class="dishe item-not-selected" onclick="selectOption('dishe', 1, 14.9, 'Frango Yin Yang')" data-identifier="food-option"> <!-- (typeOfFood, numberOfFood) -->
-                        <img src="img/dishes/frango_yin_yang.jpg" alt="Frango Yin Yang">
-                        <h3 data-identifier="food-title">Frango Yin Yang</h3>
-                        <h4>Um pouco de batata, um pouco de salada</h4>
-                        <p data-identifier="food-price">R$ 14,90</p>
-                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
-                    </div>
+                <div class="dishe item-not-selected" onclick="selectOption('dishe', 1, 14.9, 'Frango Yin Yang')"
+                    data-identifier="food-option">
+                    <img src="img/dishes/frango_yin_yang.jpg" alt="Frango Yin Yang">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price">R$ 14,90</p>
+                    <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
+                </div>
 
-                    <div class="dishe item-not-selected" onclick="selectOption('dishe', 2, 20.9, 'Macarrão')" data-identifier="food-option">
-                        <img src="img/dishes/macarrao.jpg" alt="Macarrao">
-                        <h3 data-identifier="food-title">Macarrão</h3>
-                        <h4>Tradicional italiano</h4>
-                        <p data-identifier="food-price">R$ 20,90</p>
-                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
-                    </div>
+                <div class="dishe item-not-selected" onclick="selectOption('dishe', 2, 20.9, 'Macarrão')"
+                    data-identifier="food-option">
+                    <img src="img/dishes/macarrao.jpg" alt="Macarrao">
+                    <h3 data-identifier="food-title">Macarrão</h3>
+                    <h4>Tradicional italiano</h4>
+                    <p data-identifier="food-price">R$ 20,90</p>
+                    <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
+                </div>
 
-                    <div class="dishe item-not-selected" onclick="selectOption('dishe', 3, 30.9, 'Sushi')" data-identifier="food-option">
-                        <img src="img/dishes/sushi.jpg" alt="Sushi">
-                        <h3 data-identifier="food-title">Sushi</h3>
-                        <h4>Comida japonesa hmmmmm :p</h4>
-                        <p data-identifier="food-price">R$ 30,90</p>
-                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
-                    </div>
+                <div class="dishe item-not-selected" onclick="selectOption('dishe', 3, 30.9, 'Sushi')"
+                    data-identifier="food-option">
+                    <img src="img/dishes/sushi.jpg" alt="Sushi">
+                    <h3 data-identifier="food-title">Sushi</h3>
+                    <h4>Comida japonesa hmmmmm :p</h4>
+                    <p data-identifier="food-price">R$ 30,90</p>
+                    <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
+                </div>
 
-                </div>  
-            </section>
+            </div>
+        </section>
 
-            <section class="drinks" data-identifier="drinks">
-                <h2>Agora, sua bebida</h2>
-                <div class="drinks-scroll">
-                    
-                    <div class="drink item-not-selected" onclick="selectOption('drink', 1, 4.9, 'Coquinha gelada')" data-identifier="food-option">
-                        <img src="img/drinks/coquinha_gelada.jpg" alt="Coca lata 350ml">
-                        <h3 data-identifier="food-title">Coquinha gelada</h3>
-                        <h4>Lata 350ml</h4>
-                        <p data-identifier="food-price">R$ 4,90</p>
-                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
-                    </div>
+        <section class="drinks" data-identifier="drinks">
+            <h2>Agora, sua bebida</h2>
+            <div class="drinks-scroll">
 
-                    <div class="drink item-not-selected" onclick="selectOption('drink', 2, 5, 'Fanta Uva')" data-identifier="food-option">
-                        <img src="img/drinks/fanta-uva.jpg" alt="Fanta uva lata 350ml">
-                        <h3 data-identifier="food-title">Fanta uva</h3>
-                        <h4>Lata 350ml</h4>
-                        <p data-identifier="food-price">R$ 5,00</p>
-                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
-                    </div>
+                <div class="drink item-not-selected" onclick="selectOption('drink', 1, 4.9, 'Coquinha gelada')"
+                    data-identifier="food-option">
+                    <img src="img/drinks/coquinha_gelada.jpg" alt="Coca lata 350ml">
+                    <h3 data-identifier="food-title">Coquinha gelada</h3>
+                    <h4>Lata 350ml</h4>
+                    <p data-identifier="food-price">R$ 4,90</p>
+                    <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
+                </div>
 
-                    <div class="drink item-not-selected" onclick="selectOption('drink', 3, 8.5, 'Energético Monster')" data-identifier="food-option">
-                        <img src="img/drinks/energetico.jpg" alt="Energético lata 473ml">
-                        <h3 data-identifier="food-title">Energético Monster</h3>
-                        <h4>Lata 473ml</h4>
-                        <p data-identifier="food-price">R$ 8,50</p>
-                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
-                    </div>
+                <div class="drink item-not-selected" onclick="selectOption('drink', 2, 5, 'Fanta Uva')"
+                    data-identifier="food-option">
+                    <img src="img/drinks/fanta-uva.jpg" alt="Fanta uva lata 350ml">
+                    <h3 data-identifier="food-title">Fanta uva</h3>
+                    <h4>Lata 350ml</h4>
+                    <p data-identifier="food-price">R$ 5,00</p>
+                    <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
+                </div>
 
-                </div>  
-            </section>
+                <div class="drink item-not-selected" onclick="selectOption('drink', 3, 8.5, 'Energético Monster')"
+                    data-identifier="food-option">
+                    <img src="img/drinks/energetico.jpg" alt="Energético lata 473ml">
+                    <h3 data-identifier="food-title">Energético Monster</h3>
+                    <h4>Lata 473ml</h4>
+                    <p data-identifier="food-price">R$ 8,50</p>
+                    <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
+                </div>
 
-            <section class="desserts" data-identifier="desserts">
-                <h2>Por fim, sua sobremesa</h2>
-                <div class="desserts-scroll">
-                    
-                    <div class="dessert item-not-selected" onclick="selectOption('dessert', 1, 7.9, 'Pudim')" data-identifier="food-option">
-                        <img src="img/desserts/pudim.jpg" alt="Pudim">
-                        <h3 data-identifier="food-title">Pudim</h3>
-                        <h4>Apenas pudim</h4>
-                        <p data-identifier="food-price">R$ 7,90</p>
-                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
-                    </div>
+            </div>
+        </section>
 
-                    <div class="dessert item-not-selected" onclick="selectOption('dessert', 2, 3.75, 'Sorvete')" data-identifier="food-option">
-                        <img src="img/desserts/sorvete.jpg" alt="Sorvete">
-                        <h3 data-identifier="food-title">Sorvete</h3>
-                        <h4>Três opções de sabores</h4>
-                        <p data-identifier="food-price">R$ 3,75</p>
-                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
-                    </div>
+        <section class="desserts" data-identifier="desserts">
+            <h2>Por fim, sua sobremesa</h2>
+            <div class="desserts-scroll">
 
-                    <div class="dessert item-not-selected" onclick="selectOption('dessert', 3, 13.5, 'Açai')" data-identifier="food-option">
-                        <img src="img/desserts/acai.jpg" alt="Açai">
-                        <h3 data-identifier="food-title">Açai</h3>
-                        <h4>400ml</h4>
-                        <p data-identifier="food-price">R$ 13,50</p>
-                        <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
-                    </div>
+                <div class="dessert item-not-selected" onclick="selectOption('dessert', 1, 7.9, 'Pudim')"
+                    data-identifier="food-option">
+                    <img src="img/desserts/pudim.jpg" alt="Pudim">
+                    <h3 data-identifier="food-title">Pudim</h3>
+                    <h4>Apenas pudim</h4>
+                    <p data-identifier="food-price">R$ 7,90</p>
+                    <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
+                </div>
 
-                </div>  
-            </section>
+                <div class="dessert item-not-selected" onclick="selectOption('dessert', 2, 3.75, 'Sorvete')"
+                    data-identifier="food-option">
+                    <img src="img/desserts/sorvete.jpg" alt="Sorvete">
+                    <h3 data-identifier="food-title">Sorvete</h3>
+                    <h4>Três opções de sabores</h4>
+                    <p data-identifier="food-price">R$ 3,75</p>
+                    <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
+                </div>
 
-        </main>
-        <footer>
-            <button onclick="closeOrder()">
-                Selecione os 3 itens para fechar o pedido
-            </button>
-        </footer>
-    </div>
+                <div class="dessert item-not-selected" onclick="selectOption('dessert', 3, 13.5, 'Açai')"
+                    data-identifier="food-option">
+                    <img src="img/desserts/acai.jpg" alt="Açai">
+                    <h3 data-identifier="food-title">Açai</h3>
+                    <h4>400ml</h4>
+                    <p data-identifier="food-price">R$ 13,50</p>
+                    <ion-icon name="checkmark-circle" class="checkmark-circle hidden"></ion-icon>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <button onclick="closeOrder()">
+            Selecione os 3 itens para fechar o pedido
+        </button>
+    </footer>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

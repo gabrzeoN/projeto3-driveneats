@@ -5,20 +5,11 @@
 body{
     background-color: #E5E5E5;
     font-family: 'Roboto', sans-serif;
-    /* font-family: 'Righteous', cursive; */
-    display: flex;
-    justify-content: center;
-}
-
-.app-area{
-    background-color:#EEEEEE;
-    width: 414px;
-    position: relative;  
 }
 
 header{
     background-color: #CF2B2B;
-    width: 414px;
+    width: 100%;
     height: 92px;
     padding: 0px 21px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -45,18 +36,15 @@ header p{
 }
 
 main{
-    /* margin-left:  19px; */
     margin-bottom: 16px;
 }
 
 .dishes{
-    /* background-color: tomato; */
     margin-top: 31px;
 }
 
 .drinks,
 .desserts{
-    /* background-color: tomato; */
     margin-top: 27px;
 }
 
@@ -64,8 +52,6 @@ main{
 .dishes-scroll,
 .drinks-scroll,
 .desserts-scroll{
-    /* background-color: #EEEEEE; */
-    /* background-color: violet; */
     width: 100%;
     display: flex;
     overflow-x: scroll;
@@ -74,7 +60,6 @@ main{
 .dishe,
 .drink,
 .dessert{
-    /* background-color: turquoise; */
     width: 172px;
     display: flex;
     flex-direction: column;
@@ -157,11 +142,14 @@ main p{
 
 footer{
     background-color: white;
-    width: 414px;
+    width: 100%;
     height: 92px;
     position: sticky;
     bottom: 0px;
     left: 0px;
+
+    display: flex;
+    justify-content: center;
 }
 
 footer button{
@@ -172,10 +160,7 @@ footer button{
     border: 1px solid white;
 
     position: absolute;
-    left: 25px;
-    bottom: 16px;
-
-    
+    bottom: 16px; 
     padding: 5px 70px;
 
     color: #FFFFFF;
