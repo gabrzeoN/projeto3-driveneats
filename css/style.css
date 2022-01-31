@@ -60,6 +60,8 @@ main{
 .dishe,
 .drink,
 .dessert{
+    background-color: white;
+    height: 220px;
     width: 172px;
     display: flex;
     flex-direction: column;
